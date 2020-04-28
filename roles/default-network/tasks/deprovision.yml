@@ -1,0 +1,9 @@
+---
+
+- name: Delete Kube-flannel
+  k8s:
+    state: absent
+    definition: "{{ lookup('template', 'kube-flannel-daemonset.yml') }}"
+  when: 
+    - default_network == "flannel"
+

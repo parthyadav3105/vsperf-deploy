@@ -1,0 +1,8 @@
+---
+
+- name: Add ovs network-attachment-definition
+  k8s:
+    state: present
+    definition: "{{ lookup('template', 'ovs-net.yml') }}"
+  when: 
+    - container_network == "ovs"

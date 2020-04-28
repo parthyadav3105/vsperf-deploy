@@ -1,0 +1,9 @@
+---
+
+- name: Delete Nginx pod
+  k8s:
+    state: absent
+    definition: "{{ lookup('template', 'c-vnf.yml') }}"
+  when: 
+    - c_vnf == "debug"
+

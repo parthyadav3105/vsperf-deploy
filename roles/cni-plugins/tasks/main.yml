@@ -1,0 +1,5 @@
+---
+
+- name: "{{container_network}}-cni-plugin {{action}}"
+  include: "{{action}}.yml"
+

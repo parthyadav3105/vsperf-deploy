@@ -1,0 +1,9 @@
+---
+
+- name: Deploy Kube-flannel
+  k8s:
+    state: present
+    definition: "{{ lookup('template', 'kube-flannel-daemonset.yml') }}"
+    wait: yes
+  when: 
+    - default_network == "flannel"

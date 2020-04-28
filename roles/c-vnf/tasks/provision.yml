@@ -1,0 +1,9 @@
+---
+
+- name: Deploy Example Nginx pod
+  k8s:
+    state: present
+    definition: "{{ lookup('template', 'c-vnf.yml') }}"
+    wait: yes
+  when: 
+    - c_vnf == "debug"

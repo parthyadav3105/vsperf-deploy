@@ -1,0 +1,8 @@
+---
+- hosts: all
+  roles:
+    - {role: c-vnf}
+    - {role: network-attachment-definition}
+    - {role: cni-plugins}
+    - {role: cni-multiplexer}
+    - {role: default-network}

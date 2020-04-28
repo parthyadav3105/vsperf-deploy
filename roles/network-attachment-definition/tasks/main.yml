@@ -1,0 +1,5 @@
+---
+
+- name: "{{container_network}}-network-attachment-definition {{action}}"
+  include: "{{action}}.yml"
+

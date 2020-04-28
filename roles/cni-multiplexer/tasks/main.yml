@@ -1,0 +1,5 @@
+---
+
+- name: "{{cni_multiplexer}} {{action}}"
+  include: "{{action}}.yml"
+

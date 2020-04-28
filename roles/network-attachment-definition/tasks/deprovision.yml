@@ -1,0 +1,9 @@
+---
+
+- name: Remove ovs network-attachment-definition
+  k8s:
+    state: absent
+    definition: "{{ lookup('template', 'ovs-net.yml') }}"
+  ignore_errors: yes
+  when: 
+    - container_network == "ovs"
